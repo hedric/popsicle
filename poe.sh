@@ -4,7 +4,7 @@
 # key press   67 = F1 toggle clicker script
 # key press   68 = F2 toggle flasks
 
-KEYBOARD="q.m.k HHKB mod"
+KEYBOARD="USB Keyboard"
 
 toggleClick=true
 toggleFlask=true
@@ -20,7 +20,7 @@ xinput test "$KEYBOARD" | while read in ; do
     elif [[ $in = "key press   67" ]] ; then
         if [[ "$toggleClick" = true ]] ; then
             # launch clicker script with & and move on
-            sh $HOME/scripts/clicker.sh start & 
+            sh $PWD/clicker.sh start & 
             toggleClick=false
          
         else
